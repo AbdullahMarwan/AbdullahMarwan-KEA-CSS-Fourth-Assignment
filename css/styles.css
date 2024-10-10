@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primaryColor: #ea5147;
+  --secondaryColor: #26354a;
+
+  --textColorPrimary: #ffffff;
+  --textColorSecondary: rgb(0, 0, 0);
+  --selectedMenuColor: #e4d7a8;
+  --quoteColor: #d3d3d3;
+
+  --fontMain: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+main {
+  /* margin-left: 8rem;
+  margin-right: 8rem; */
+  /* padding-top: 1em;
+  padding-bottom: 1em;
+  max-width: 66%;
+  margin-left: 20%; */
+}
+
+.pageContent {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    gap: 1rem; /* Adds space between flex items */
+    max-width: 100%; /* Ensure container doesn't exceed screen width */
+    align-items: center; /* Aligns content vertically */
+    justify-content: center; /* Centers the content horizontally */
+}
+
+header {
+  background-color: var(--primaryColor);
+  color: var(--textColorPrimary);
+  h1 {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+.roundImg {
+  border-radius: 2rem;
+  max-width: 40%;
+  height: auto;
+}
+
+.navBar {
+  background-color: var(--secondaryColor);
+  padding: 0.5rem 2rem;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1.4rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+      border-bottom: 0.125rem solid white; /* Add white border to all list items */
+      padding: 0rem;
+      width: 80%;
+
+      a {
+        text-decoration: none;
+        color: var(--textColorPrimary);
+        font-weight: 400;
+      }
+      :hover {
+        color: var(--textColorSecondary);
+      }
+      .active {
+        color: var(--selectedMenuColor);
+        font-weight: 800;
+      }
+    }
+    :nth-last-child(1) {
+      border-bottom: none; /* Remove border from the last element */
+    }
+  }
+}
+
+#redList {
+  color: var(--primaryColor);
+}
+
+blockquote {
+  background-color: var(--quoteColor);
+}
+
+footer {
+  background-color: var(--secondaryColor);
+  color: var(--textColorPrimary);
+  text-align: center;
+}
